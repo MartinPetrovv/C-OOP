@@ -1,0 +1,36 @@
+namespace PersonsInfo;
+
+public class StartUp
+{
+
+    static void Main()
+    {
+
+        var lines = int.Parse(Console.ReadLine());
+        var persons = new List<Person>();
+
+
+        for (int i = 0; i < lines; i++)
+        {
+            var cmdArgs = Console.ReadLine().Split();
+            var person = new Person(cmdArgs[0], cmdArgs[1], int.Parse(cmdArgs[2]), decimal.Parse(cmdArgs[3]));
+            persons.Add(person);
+        }
+
+
+       // var percentage = decimal.Parse(Console.ReadLine());
+       // persons.ForEach(p => p.IncreaseSalary(percentage));
+        persons.ForEach(p=> Console.WriteLine(p.ToString()));
+
+    }
+}
+
+/*
+5
+Andrew Williams -6 2200
+B Gomez 57 3333
+Carolina Richards 27 670
+Gilbert H 44 666.66
+Joshua Anderson 35 300
+20
+*/
