@@ -38,7 +38,7 @@ namespace FootballTeam.Tests
         }
 
         [Test]
-        public void Test_AddNewPlayer()
+        public void Test_AddNewPlayer_InCorrectly()
         {
             var team = new FootballTeam("Levski", 15);
             var player = new FootballPlayer("Pesho", 8, "Forward");
